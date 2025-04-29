@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catologo de productos</title>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <header>
-        <h1>Tienda de Articulo para Mascotas</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <img class="logo" src="./img/logo.png" alt="logo">
+            <div class="nav-busqueda">
+                <input type="text" placeholder="Buscar productos">
+                <nav class="nav-header">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="perros.html">Perros</a></li>
+                        <li><a href="productos.html">Gatos</a></li>
+                        <li><a href="productos.html">Aves</a></li>
+                        <li><a href="productos.html"> Ofertas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <h2>Contáctanos</h2>
+    <form>
+        <h2>
+            Formulario de contacto
+        </h2>
+        <div class="form_input">
+            <input name="nombre" placeholder="Nombre completo">
+        </div>
+        <div class="form_input">
+            <input name="email" placeholder="Email">
+        </div>
+        <div class="form_input">
+            <textarea placeholder="Deja tu mensaje"></textarea>
 
-    <form action="" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required>
-        <br>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required>
-        <br>
-        <br>
-        <label for="mensaje">Mensaje:</label>
-        <br>
-        <textarea name="mensaje" id="mensaje" rows="5"></textarea>
-        <br>
-        <input type="submit" value="Enviar">
+        </div>
     </form>
-    
+
+    <footer>
+        <p>&copy; 2025 Tienda de Mascotas. Todos los derechos reservados.</p>
+        <a href="./contact.html">Contacto</a>
+    </footer>
 </body>
+
 </html>
