@@ -7,8 +7,8 @@
 }
 
 body {
-    background-color: #dddddd; 
-    color: #0006;
+    background-color: #f5f3ff; 
+    color: #663399;
     font-size: 15px;
     line-height: 1.5; /* Espaciado entre líneas */
 }
@@ -22,7 +22,7 @@ h2 {
 }
 
 header {
-    background-color: #7c3aed;
+    background-color: #663399;
     color: white;
 }
 
@@ -67,6 +67,10 @@ header {
     padding: 20px;
 }
 
+.nav-header a.nav-contacto {
+    color: #FFD700; 
+}
+
 .container {
     display: flex; 
     flex-direction: column; 
@@ -96,7 +100,7 @@ main {
 }
 
 .product-card {
-    background-color: #dddddd;
+    background-color: #f9f9f9;
     box-sizing: border-box;
     border: 1px solid white;
     padding: 1rem;
@@ -109,7 +113,7 @@ main {
     text-align: center;
     width: 100%;
     max-width: 400px;
-    height: 350px;
+    min-height: 350px;
 }
 
 .product-card img {
@@ -119,8 +123,8 @@ main {
 
 .product-card button {
     align-self: center;
-    background-color: rgb(59, 130, 246);
-    color: white;
+    background-color: #FFD700;
+    color: #663399;
     padding: 10px 20px;
     border-radius: 7px;
     border: none;
@@ -128,11 +132,11 @@ main {
 }
 
 .product-card button:hover {
-    background-color: #2563eb;
+    background-color: #e6c200;
 }
 
 footer {
-    background-color: #7c3aed;
+    background-color: #663399;
     color: white;
     padding: 10px;
     text-align: center;
@@ -140,27 +144,35 @@ footer {
 }
 
 footer a {
-    color: white;
+    color: #FFD700;
     text-decoration: none;
     font-weight: bold;
 }
 
 form {
-    background-color: #ededed;
+    background-color: #f9f9f9;
     max-width: 500px;
     margin: auto;
     border-radius: 8px;
     margin-top: 50px;
-    margin-bottom: 500px;
+    margin-bottom: 27rem;
+}
+
+form h2 {
+    border: 1px solid white;
 }
 
 .form_input {
     width: 100%;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     box-shadow: 0px 0px 15px #0003;
     border-radius: 5px;
     color: #333;
+}
+
+.form_input:invalid {
+    border: 1px solid red;
 }
 
 textarea {
@@ -170,4 +182,42 @@ textarea {
     font-family: sans-serif;
 }
 
+.btn-enviar {
+    background-color: #f9f9f9;
+    width: 100%;
+    padding: 6px 12px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 15px #0003;
+    border-radius: 5px;
+    color: #333;
+}
 
+.btn-enviar:hover {
+    background-color: #a8a8a8;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .nav-busqueda {
+        flex-direction: column;
+    }
+
+    .nav-header ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 0;
+    }
+
+    header {
+        padding-bottom: 20px; /* Agrega espacio inferior */
+    }
+
+    .product-card img {
+        width: 80%; /* En móviles, que no sea tan chico */
+    }
+}

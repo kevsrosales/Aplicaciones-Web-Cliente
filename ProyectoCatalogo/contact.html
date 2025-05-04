@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catologo de productos</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
@@ -17,29 +17,28 @@
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="perros.html">Perros</a></li>
-                        <li><a href="productos.html">Gatos</a></li>
-                        <li><a href="productos.html">Aves</a></li>
-                        <li><a href="productos.html"> Ofertas</a></li>
+                        <li><a href="gatos.html">Gatos</a></li>
+                        <li><a href="aves.html">Aves</a></li>
+                        <li><a href="ofertas.html"> Ofertas</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <form>
-        <h2>
-            Formulario de contacto
-        </h2>
-        <div class="form_input">
-            <input name="nombre" placeholder="Nombre completo">
-        </div>
-        <div class="form_input">
-            <input name="email" placeholder="Email">
-        </div>
-        <div class="form_input">
-            <textarea placeholder="Deja tu mensaje"></textarea>
+    <form method="post">
+        <h2>Contacto</h2>
 
-        </div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" class="form_input" required placeholder="Tu nombre">
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" name="email" class="form_input" required placeholder="tucorreo@ejemplo.com">
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje" class="form_input" required placeholder="Escribí tu consulta..."></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar</button>
     </form>
 
     <footer>
