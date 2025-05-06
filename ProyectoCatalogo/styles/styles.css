@@ -1,25 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+:root {
+    --box-shadow: 0px 0px 15px #0003;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 body {
     background-color: #f5f3ff; 
     color: #663399;
     font-size: 15px;
-    line-height: 1.5; /* Espaciado entre líneas */
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
     text-align: center;
     margin: 0;
-    border: 1px solid #ccc;
     box-shadow: 0px 0px 15px #0003;
     border-radius: 5px;
 }
+
+/* Estilos para el header */
 
 header {
     background-color: #663399;
@@ -71,6 +76,8 @@ header {
     color: #FFD700; 
 }
 
+/* Product card - main */
+
 .container {
     display: flex; 
     flex-direction: column; 
@@ -100,6 +107,7 @@ main {
 }
 
 .product-card {
+    position: relative;
     background-color: #f9f9f9;
     box-sizing: border-box;
     border: 1px solid white;
@@ -135,6 +143,8 @@ main {
     background-color: #e6c200;
 }
 
+/* Footer */
+
 footer {
     background-color: #663399;
     color: white;
@@ -149,13 +159,15 @@ footer a {
     font-weight: bold;
 }
 
+/* Form */
+
 form {
     background-color: #f9f9f9;
     max-width: 500px;
     margin: auto;
     border-radius: 8px;
     margin-top: 50px;
-    margin-bottom: 27rem;
+    margin-bottom: 5rem;
 }
 
 form h2 {
@@ -166,7 +178,7 @@ form h2 {
     width: 100%;
     padding: 6px 12px;
     border: 1px solid white;
-    box-shadow: 0px 0px 15px #0003;
+    box-shadow: var(--box-shadow);
     border-radius: 5px;
     color: #333;
 }
@@ -187,7 +199,7 @@ textarea {
     width: 100%;
     padding: 6px 12px;
     border: 1px solid white;
-    box-shadow: 0px 0px 15px #0003;
+    box-shadow: var(--box-shadow);
     border-radius: 5px;
     color: #333;
 }
@@ -195,6 +207,46 @@ textarea {
 .btn-enviar:hover {
     background-color: #a8a8a8;
 }
+
+/* Oferta */
+
+.product-card.oferta {
+    border: 2px solid #e60000;
+    background-color: #fff5f5;
+    position: relative;
+}
+
+.etiqueta-oferta {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e60000;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.precio {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.precio-anterior {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.precio-oferta {
+    color: #d32f2f;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* Media Queries para Responsividad */
 
 @media (max-width: 768px) {
     .header-container {
