@@ -48,7 +48,6 @@ function renderProductDetails(product, id) {
     description.classList.add('descripcion');
     description.textContent = product.description || 'Sin descripción disponible.';
 
-
     const offert = document.createElement('p');
     if (product.offert) {
         offert.textContent = '🔥 ¡Producto en oferta!';

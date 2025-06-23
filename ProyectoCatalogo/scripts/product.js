@@ -65,8 +65,6 @@ function renderTableProducts(list) {
         window.location.href = `edit-product.html?id=${product.id}`;
 });
 
-
-
         row.appendChild(titleTd);
         row.appendChild(priceTd);
         row.appendChild(categoryTd);

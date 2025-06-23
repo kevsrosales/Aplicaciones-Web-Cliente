@@ -63,7 +63,6 @@ function createProductCard(product) {
     window.location.href = `detalle.html?id=${product.id}`;
 });
 
-
     card.appendChild(title);
     card.appendChild(price);
     card.appendChild(img);
