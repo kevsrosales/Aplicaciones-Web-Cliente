@@ -27,7 +27,7 @@ const getProducts = async () => {
         const data = await response.json();
 
         products = data.records.map(item => ({
-            id: item.id, // 👈 necesario para editar o eliminar
+            id: item.id,
             title: item.fields.title,
             price: item.fields.price,
             image: item.fields.image,
@@ -45,7 +45,7 @@ const getProducts = async () => {
 };
 
 function renderTableProducts(list) {
-    productListTable.innerHTML = ''; // Limpiar tabla
+    productListTable.innerHTML = '';
 
     list.forEach(product => {
         const row = document.createElement('tr');
@@ -76,7 +76,6 @@ function renderTableProducts(list) {
     });
 }
 
-// Mostrar/ocultar formulario al hacer click en botón Añadir Producto
 btnAddProduct?.addEventListener('click', () => {
     addProductForm.style.display = 'block';
     btnAddProduct.style.display = 'none';
@@ -88,7 +87,6 @@ btnCancel?.addEventListener('click', () => {
     addProductForm.reset();
 });
 
-// Agregar producto a Airtable
 addProductForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -116,7 +114,7 @@ addProductForm?.addEventListener('submit', async (e) => {
         addProductForm.reset();
         addProductForm.style.display = 'none';
         btnAddProduct.style.display = 'block';
-        getProducts(); // Refrescar productos
+        getProducts();
     } catch (error) {
         console.error('Error al crear producto:', error);
         alert('Hubo un error al crear el producto.');

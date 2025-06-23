@@ -12,16 +12,12 @@
 <body>
     <header>
         <div class="header-container">
-            <!-- Logo -->
             <img class="logo" src="img/logo.png" alt="logo">
 
-            <!-- Links a la izquierda -->
             <div class="nav-left">
                 <a href="login.html">Ingresar</a>
                 <a href="carrito.html">Carrito</a>
             </div>
-
-            <!-- Centro: buscador + menú -->
             <div class="nav-center">
                 <input id="input-search-products" type="text" placeholder="Buscar productos">
                 <nav class="nav-header">
@@ -34,8 +30,6 @@
                     </ul>
                 </nav>
             </div>
-
-            <!-- Menú hamburguesa (por ahora solo visual) -->
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -45,10 +39,10 @@
     </header>
     <main>
         <h2>Contacto</h2>
-            <form onsubmit="enviarConsulta(event)" class="form-contacto">
+        <form onsubmit="enviarConsulta(event)" class="form-contacto">
 
             <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" class="form_input" required placeholder="Escriba tu nombre">
+            <input type="text" name="nombre" class="form_input" required placeholder="Escriba tu nombre">
 
             <label for="email">Correo electrónico:</label>
             <input type="email" name="email" class="form_input" required placeholder="tucorreo@ejemplo.com">
@@ -65,7 +59,7 @@
         <a href="contact.html">Contacto</a>
     </footer>
 
-    <!-- Scripts -->
+    <!-- script de menu hamburguesa -->
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-header ul');
@@ -75,7 +69,7 @@
         });
     </script>
 
-    
 </body>
 <script src="scripts/contact.js"></script>
+
 </html>

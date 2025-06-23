@@ -5,7 +5,7 @@ function enviarConsulta(event) {
     const email = document.querySelector('input[name="email"]').value.trim();
     const mensaje = document.querySelector('textarea[name="mensaje"]').value.trim();
 
-    // Simulamos envío exitoso (podrías reemplazar con Airtable si querés)
+    // mensaje nuevo
     Swal.fire({
         icon: 'success',
         title: 'Consulta enviada',
